@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Oswald-Bold";
+  src: url("../../fonts/Oswald-Bold.ttf");
+}
+@font-face {
+  font-family: "Oswald-Medium";
+  src: url("../../fonts/Oswald-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Browood-Regular";
+  src: url("../../fonts/Browood-Regular.ttf");
+}
+
+$fontRegular: "Browood-Regular", "sans-serif";
+$neutral_1: #000000;
+$neutral_2: #ffffff;
+$neutral_3: rgba(#000000, 0.2);
+$neutral_4: #1991ff;
+
+$padding__section: 100px;

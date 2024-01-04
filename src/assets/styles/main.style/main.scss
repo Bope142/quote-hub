@@ -1,0 +1,45 @@
+@import "./reset.scss";
+@import "./variable.scss";
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  height: 100vh;
+  background: rgb(1, 0, 0);
+  // overflow: hidden;
+  width: 100%;
+  font-family: $fontMedium;
+}
+
+* {
+  user-select: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+}
+.App {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
