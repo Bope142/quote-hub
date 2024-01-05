@@ -1,0 +1,142 @@
+@import "./reset.scss";
+@import "./variable.scss";
+
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  height: 100vh;
+  background: rgb(1, 0, 0);
+  // overflow: hidden;
+  width: 100%;
+  font-family: $fontRegular;
+}
+
+* {
+  user-select: none !important;
+  text-decoration: none !important;
+  outline: none !important;
+}
+#root {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: hsla(341, 94%, 49%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(341, 94%, 49%, 1) 0%,
+    hsla(16, 90%, 77%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(341, 94%, 49%, 1) 0%,
+    hsla(16, 90%, 77%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(341, 94%, 49%, 1) 0%,
+    hsla(16, 90%, 77%, 1) 100%
+  );
+}
+.App {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.container__app {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 25px;
+  width: 280px;
+  position: relative;
+  & .icons-quotes {
+    height: 5rem;
+    width: 5rem;
+    transform: translateX(-10px);
+  }
+  & .quote-text {
+    color: white;
+    line-height: 1.7rem;
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.479);
+  }
+  & .quote-author {
+    align-self: flex-end;
+    color: rgba(255, 255, 255, 0.432);
+    line-height: 1rem;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+  & .btn-refresh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: none;
+    border-radius: 50%;
+    background: black;
+    align-self: center;
+    flex: none;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    bottom: -12%;
+    transform: translateX(-50%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    & svg {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 0 0 #0004;
+  animation: l2 1.5s infinite linear;
+  position: relative;
+  transform: scale(3);
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 #0004;
+  animation: inherit;
+  animation-delay: -0.5s;
+}
+.loader:after {
+  animation-delay: -1s;
+}
+@keyframes l2 {
+  100% {
+    box-shadow: 0 0 0 40px #0000;
+  }
+}
