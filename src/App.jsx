@@ -1,7 +1,7 @@
 import "./assets/styles/main.style/main.scss";
 import { ReactComponent as RefreshIcons } from "./assets/icons/available_updates.svg";
 import { ReactComponent as QuoteIcons } from "./assets/icons/quote_left.svg";
-import { useState, useEffect, memo } from "react";
+import { useState, useEffect } from "react";
 const ContainerTextQuote = (props) => {
   return <p className="quote-text">{props.text}</p>;
 };
@@ -13,7 +13,6 @@ const fecthRandomQuote = (setQoutes) => {
     })
     .then(function (data) {
       setQoutes(data);
-      return data;
     })
     .catch((error) => {
       console.error(error);
@@ -105,4 +104,4 @@ function App() {
   );
 }
 
-export default memo(App);
+export default App;
