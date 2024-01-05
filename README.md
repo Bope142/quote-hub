@@ -4,7 +4,7 @@ QuoteHub is a React application that displays inspirational quotes. Click the bu
 
 ## Demo
 
-You can check out the live demo [here](https://type.fit/api/quotes).
+You can check out the live demo [here](https://quote-hub-omega.vercel.app/).
 
 ## Technologies Used
 
